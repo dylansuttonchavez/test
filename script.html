@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Berth - A comprehensive library of pre-trained AI models for text processing, vision, and analytics.">
+    <meta name="keywords" content="AI models, Machine learning, Neural networks, AI library, Pre-trained models">
+    <meta name="author" content="Dylan Sutton">
+    <title>Berth - AI Model Library</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="image-07-13-30-42.png" type="image/png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {},
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Google Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <!-- Backdrop Layer -->
+    <div id="backdropLayer"
+        class="fixed inset-0 bg-white/60 backdrop-blur-md hidden z-40 transition-opacity duration-300 ease-in-out">
+    </div>
+
+    <!-- Mobile Menu Section -->
+    <div id="mobileMenu"
+        class="fixed inset-y-0 left-0 w-64 bg-white h-full shadow-lg p-6 transform -translate-x-full transition-transform duration-300 ease-in-out z-50 will-change-transform">
+        <button id="closeMenuButton" class="text-black mb-6">Close &times;</button>
+        <nav class="flex flex-col gap-6">
+            <a href="/dataset" class="text-gray-600 hover:text-gray-900">Dataset</a>
+            <a href="/publications" class="text-gray-600 hover:text-gray-900">Publications</a>
+            <a href="/models" class="text-gray-600 hover:text-gray-900">Models</a>
+            <a href="/login" class="text-gray-600 hover:text-gray-900">Login</a>
+        </nav>
+    </div>
+
+    <!-- Header / Main Navigation -->
+    <header class="border-b border-gray-200 w-full mb-6">
+        <nav class="w-full px-4 md:px-16 py-3 flex items-center justify-between" aria-label="Main Navigation">
+            <div class="flex items-center">
+                <button id="menuButton" class="md:hidden text-lg" aria-label="Open Menu">&#9776;</button>
+                <a href="/berth" class="flex items-center gap-2 ml-4 md:ml-0" aria-label="Berth Home">
+                    <span class="text-gray-600 text-lg font-medium">Berth</span>
+                </a>
+                <div class="ml-6 hidden md:flex gap-8 text-sm">
+                    <a href="/dataset" class="text-gray-600 hover:text-gray-900">Dataset</a>
+                    <a href="/publications" class="text-gray-600 hover:text-gray-900">Publications</a>
+                    <a href="/models" class="text-gray-600 hover:text-gray-900">Models</a>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <a href="/login" class="text-gray-600 hover:text-gray-900 text-sm">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="mx-auto max-w-3xl text-center px-4">
+        <!-- Logo and Intro -->
+        <div class="mb-6 flex items-center justify-center mt-8">
+            <img src="image-07-13-30-42.png" class="w-24 h-24 rounded-full" alt="Berth Logo">
+        </div>
+
+        <h1 class="text-2xl md:text-3xl mb-4">
+            Berth, AI Model Library
+        </h1>
+
+        <p class="mb-8 text-lg text-gray-600">
+            Extensive library of pre-trained AI models for diverse applications, including text processing, vision, and
+            advanced analytics.
+        </p>
+
+        <!-- Divider Line -->
+        <hr class="my-8 border-t border-gray-200">
+
+        <!-- Video Preview Section, Kurzgesagt -->
+        <div class="mb-8 w-full max-w-screen-lg mx-auto">
+            <div class="relative w-full overflow-hidden rounded-lg border border-gray-200 shadow-md"
+                style="padding-top: 56.25%;">
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/fa8k8IQ1_X0"
+                    title="A.I. ‐ Humanity's Final Invention?" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <section class="container mx-auto px-4 py-8 border-t border-gray-200 max-w-screen-lg">
+            <div class="text-center mb-4">
+                <h2 class="text-2xl md:text-3xl mb-4">Search for AI Resources</h2>
+                <p class="text-gray-600 mb-6">Find datasets, code repositories, books, and other resources related to AI
+                    and machine learning.</p>
+                <!-- Search Input and Button -->
+                <div class="relative max-w-3xl mx-auto">
+                    <input type="text" placeholder="Search for datasets, code, books..."
+                        class="w-full p-4 text-gray-700 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600"
+                        aria-label="Search through the AI resources database" />
+                    <button type="submit"
+                        class="absolute right-0 top-0 mt-2 mr-2 bg-[#3e4652] text-white px-4 py-2 rounded-full hover:bg-[#303742] transition-colors hidden sm:inline">Search</button>
+                    <button type="submit"
+                        class="block w-full mt-4 bg-[#3e4652] text-white px-4 py-3 rounded-full hover:bg-[#303742] transition-colors sm:hidden">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Neural Networks Information Section -->
+        <section class="container mx-auto px-4 py-8 border-t border-gray-200 max-w-screen-lg">
+            <div class="text-center">
+                <p class="text-gray-700 mb-6">Neural networks are computational models inspired by the human brain,
+                    capable of learning complex patterns from data through interconnected layers of nodes.</p>
+                <article class="text-center text-gray-700">
+                    <p>
+                        A neural network consists of layers of interconnected neurons, where each connection carries a
+                        weight that determines the strength of the signal. When data is passed through the network, each
+                        neuron applies a mathematical function to its inputs, transforms the data, and passes it to the
+                        next layer. This process allows the network to learn and adapt by adjusting weights based on the
+                        error between predicted and actual outcomes during training.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Product Grid Section -->
+        <section class="container mx-auto px-4 py-8 border-t border-gray-200 max-w-screen-lg">
+            <h2 class="text-2xl md:text-3xl mb-6">Some of The Models</h2>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 mb-4">
+                <a href="#" class="block p-6 border rounded-lg hover:bg-gray-50 transition-colors">
+                    <div class="text-left">
+                        <h2 class="text-lg text-gray-800">VisionAI Pro - 1.0</h2>
+                        <p class="text-sm text-gray-600 mt-1">
+                            VisionAI Pro is a state-of-the-art computer vision platform that provides advanced image and video analysis capabilities for diverse applications, from security to healthcare.
+                        </p>
+                        <div class="mt-2 flex justify-between items-center text-xs text-gray-500">
+                            <div class="flex space-x-2">
+                                <span class="px-2 py-0.5 bg-blue-200 text-blue-500 rounded">Vision</span>
+                                <span class="px-2 py-0.5 bg-blue-200 text-blue-500 rounded">Image</span>
+                            </div>
+                            <span>April 27, 2024</span>
+                        </div>
+                    </div>
+                </a>                
+                <a href="#" class="block p-6 border rounded-lg hover:bg-gray-50 transition-colors">
+                    <div class="text-left">
+                        <h2 class="text-lg text-gray-800">ChipForge AI - 1.0</h2>
+                        <p class="text-sm text-gray-600 mt-1">
+                            ChipForge AI leverages advanced machine learning algorithms to optimize microchip design and manufacturing processes, enhancing efficiency and reducing costs.
+                        </p>
+                        <div class="mt-2 flex justify-between items-center text-xs text-gray-500">
+                            <div class="flex space-x-2">
+                                <span class="px-2 py-0.5 bg-blue-200 text-blue-500 rounded">Microchip</span>
+                            </div>
+                            <span>April 27, 2024</span>
+                        </div>
+                    </div>
+                </a>                
+                <a href="#" class="block p-6 border rounded-lg hover:bg-gray-50 transition-colors">
+                    <div class="text-left">
+                        <h2 class="text-lg text-gray-800">DataScrape AI - 1.0</h2>
+                        <p class="text-sm text-gray-600 mt-1">
+                            DataScrape AI is an advanced model designed to automatically generate high-quality datasets by utilizing sophisticated web scraping techniques, streamlining the data collection process for various applications.
+                        </p>
+                        <div class="mt-2 flex justify-between items-center text-xs text-gray-500">
+                            <div class="flex space-x-2">
+                                <span class="px-2 py-0.5 bg-blue-200 text-blue-500 rounded">Web Scraping</span>
+                                <span class="px-2 py-0.5 bg-blue-200 text-blue-500 rounded">Data</span>
+                            </div>
+                            <span>April 27, 2024</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="block p-6 border rounded-lg hover:bg-gray-50 transition-colors">
+                    <div class="text-left">
+                        <h2 class="text-lg text-gray-800">OmniMind AGI - 1.0</h2>
+                        <p class="text-sm text-gray-600 mt-1">
+                            OmniMind AGI is an advanced artificial general intelligence platform designed to emulate human cognitive abilities, enabling versatile and autonomous problem-solving across various domains.
+                        </p>
+                        <div class="mt-2 flex justify-between items-center text-xs text-gray-500">
+                            <div class="flex space-x-2">
+                                <span class="px-2 py-0.5 bg-blue-200 text-blue-500 rounded">AGI</span>
+                                <span class="px-2 py-0.5 bg-blue-200 text-blue-500 rounded">Cognitive AI</span>
+                            </div>
+                            <span>April 27, 2024</span>
+                        </div>
+                    </div>
+                </a>                                              
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="px-4 md:px-16 py-3 border-t border-gray-200">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+            <div class="flex items-center gap-6 mb-4 sm:mb-0">
+                <span class="text-lg font-medium hidden md:block text-gray-600">Berth</span>
+                <a href="/legal" class="hover:text-gray-900">Terms</a>
+                <a href="#" class="hover:text-gray-900">Resume</a>
+                <a href="/contact" class="hover:text-gray-900">Contact</a>
+            </div>
+            <p class="text-gray-600">Dylan Sutton</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Menu Toggle -->
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const closeMenuButton = document.getElementById('closeMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const backdropLayer = document.getElementById('backdropLayer');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-x-full');
+            backdropLayer.classList.toggle('hidden');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-x-full');
+            backdropLayer.classList.toggle('hidden');
+        });
+
+        backdropLayer.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+            backdropLayer.classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>
